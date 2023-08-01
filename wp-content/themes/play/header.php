@@ -14,7 +14,7 @@
   <header class="flex-row-center">
     <div class="container">
       <div class="logo">
-        <a href="/buildbox/">Logo</a>
+        <a href="/buildbox/"><?php the_custom_logo() ?></a>
       </div>
       <nav class="menu">
         <?php wp_nav_menu(['theme_location' => 'main_menu']); ?>

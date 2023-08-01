@@ -87,9 +87,15 @@ function cptui_register_my_taxes_video_type() {
 }
 add_action( 'init', 'cptui_register_my_taxes_video_type' );
 
-// Registrando o menu do tema
-register_nav_menus([
-  'main_menu' => 'Main Menu'
-]);
 
+function play_config(){
+	// Registrando o menu do tema
+	register_nav_menus([
+		'main_menu' => 'Main Menu'
+	]);
+
+	// Suportes do Tema
+	add_theme_support('custom-logo', ['height' => 33, 'width' => 103]);
+}
+add_action('after_setup_theme', 'play_config', 0);
 ?>
