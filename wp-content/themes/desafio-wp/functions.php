@@ -14,12 +14,12 @@ function cptui_register_my_cpts_video() {
 	 */
 
 	$labels = [
-		"name" => esc_html__( "Vídeos", "custom-post-type-ui" ),
-		"singular_name" => esc_html__( "Vídeo", "custom-post-type-ui" ),
+		"name" => esc_html__( "Vídeos", "bx-desafio" ),
+		"singular_name" => esc_html__( "Vídeo", "bx-desafio" ),
 	];
 
 	$args = [
-		"label" => esc_html__( "Vídeos", "custom-post-type-ui" ),
+		"label" => esc_html__( "Vídeos", "bx-desafio" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
@@ -46,7 +46,6 @@ function cptui_register_my_cpts_video() {
 
 	register_post_type( "video", $args );
 }
-
 add_action( 'init', 'cptui_register_my_cpts_video' );
 
 // Taxonomia "Tipo do Vídeo" criada com o CPT UI
@@ -57,13 +56,13 @@ function cptui_register_my_taxes_video_type() {
 	 */
 
 	$labels = [
-		"name" => esc_html__( "Tipo do Vídeo", "custom-post-type-ui" ),
-		"singular_name" => esc_html__( "Tipo do Vídeo", "custom-post-type-ui" ),
+		"name" => esc_html__( "Tipo do Vídeo", "bx-desafio" ),
+		"singular_name" => esc_html__( "Tipo do Vídeo", "bx-desafio" ),
 	];
 
 	
 	$args = [
-		"label" => esc_html__( "Tipo do Vídeo", "custom-post-type-ui" ),
+		"label" => esc_html__( "Tipo do Vídeo", "bx-desafio" ),
 		"labels" => $labels,
 		"public" => true,
 		"publicly_queryable" => true,
@@ -111,7 +110,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'return_format' => 'array',
+			'return_format' => 'url',
 			'library' => 'all',
 			'min_width' => '',
 			'min_height' => '',

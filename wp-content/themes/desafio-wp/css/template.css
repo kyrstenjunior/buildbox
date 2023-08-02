@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularSpotifyTxT-Light.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularSpotifyTxT-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularSpotifyTxT-Black.ttf") format("truetype");
+  font-weight: 900;
+}
 * {
   --bg-header: #000000E6;
   --bg-footer: #121212;
@@ -12,7 +27,8 @@
 }
 
 html, body {
-  font-family: "Lato", sans-serif;
+  font-family: "Circular", sans-serif;
+  font-weight: normal;
 }
 
 a {
@@ -64,4 +80,8 @@ footer .container {
 .conteudo-inicial {
   background-color: var(--bg-page);
   color: var(--text);
+}
+
+h1 {
+  font-weight: 900;
 }/*# sourceMappingURL=template.css.map */
