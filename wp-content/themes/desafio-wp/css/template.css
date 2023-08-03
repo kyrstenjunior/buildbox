@@ -1,7 +1,13 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Circular";
   src: url("../assets/fonts/CircularSpotifyTxT-Light.ttf") format("truetype");
   font-weight: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularSpotifyTxT-Med.ttf") format("truetype");
+  font-weight: 500;
 }
 @font-face {
   font-family: "Circular";
@@ -29,6 +35,7 @@
 html, body {
   font-family: "Circular", sans-serif;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 a {
@@ -42,7 +49,7 @@ a:hover {
 .container {
   max-width: 1700px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 8%;
 }
 
 .flex-row-center {
@@ -51,10 +58,34 @@ a:hover {
   justify-content: center;
 }
 
+.video-type {
+  font: normal normal 500 18px/100px "Circular";
+  letter-spacing: 0.54px;
+  text-align: center;
+  color: #5A5A5A;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 3px 36px;
+}
+
+.duration {
+  font: normal normal 500 18px/100px "Circular";
+  letter-spacing: 0.54px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 3px 40px;
+  margin-left: 10px;
+}
+
 header {
+  width: 100%;
   height: 92px;
   color: var(--text);
   background-color: var(--bg-header);
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 header .container {
   display: flex;
@@ -80,8 +111,87 @@ footer .container {
 .conteudo-inicial {
   background-color: var(--bg-page);
   color: var(--text);
+  padding-bottom: 110px;
 }
 
 h1 {
   font-weight: 900;
+}
+
+.bg-inicial {
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-inicial .bg-filter {
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  background-color: #000;
+  filter: opacity(0.5);
+}
+.bg-inicial .featured-content {
+  position: relative;
+  top: 427px;
+  margin-left: 8%;
+}
+.bg-inicial .featured-content h1 {
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: 900;
+  letter-spacing: -4px;
+  margin-top: 11px;
+}
+.bg-inicial .featured-content a {
+  font: normal normal 500 18px/100px "Circular";
+  letter-spacing: 0.54px;
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 3px;
+  padding: 19px 78px;
+  margin-top: 13px;
+}
+
+.carousel {
+  margin-left: 8%;
+}
+.carousel h2 {
+  margin-bottom: 34px;
+}
+.carousel h2 a {
+  font: normal normal 900 40px/100px "Circular";
+  letter-spacing: -1px;
+  color: var(--primary);
+}
+.carousel h2#Filmes {
+  margin-top: 101px;
+}
+.carousel h2#Séries, .carousel h2#Documentários {
+  margin-top: 48px;
+}
+.carousel .slider {
+  display: flex;
+  gap: 30px;
+}
+.carousel .miniatura {
+  max-width: 248px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.carousel .miniatura img {
+  max-width: 248px;
+  height: 387px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel .miniatura .duration {
+  line-height: normal;
+  margin: 27px 0 13.5px 0;
+}
+.carousel .miniatura h3 {
+  font: normal normal 900 30px/30px "Circular";
+  letter-spacing: -0.3px;
 }/*# sourceMappingURL=template.css.map */

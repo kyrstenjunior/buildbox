@@ -1,1 +1,23 @@
 https://github.com/Buildbox-ItSolutions/wordpress-developer-challenge
+
+APAGAR DEPOIS DE FINALIZAR
+
+Rascunho:
+
+<!--Loop para recuperar dados dos posts-->
+<?php
+  $args = ['post_type' => 'video'];
+  $query = new WP_Query($args);
+  while($query -> have_posts()){
+    $query -> the_post(); ?>
+    <ul>
+      <li>
+        <a href="<?php echo get_permalink(); ?>">
+          <?php the_title(); ?>
+          <span>
+            <?php the_taxonomies() ?>
+          </span>
+        </a>
+      </li>
+    </ul>
+<?php } ?>
