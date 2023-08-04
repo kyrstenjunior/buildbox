@@ -232,4 +232,18 @@ function play_config(){
 	add_theme_support('custom-logo', ['height' => 33, 'width' => 103]);
 }
 add_action('after_setup_theme', 'play_config', 0);
+
+function swiper_carousel(){
+	// Adicionando Script do Swiper
+	wp_enqueue_script('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js');
+}
+add_action('wp_enqueue_scripts','swiper_carousel');
+
+function carousel_script(){
+	// Adicionando Script do Carrossel
+	wp_enqueue_script('carousel', get_stylesheet_directory_uri() . '/js/carousel.js');
+}
+add_action('wp_enqueue_scripts','carousel_script');
+
+
 ?>

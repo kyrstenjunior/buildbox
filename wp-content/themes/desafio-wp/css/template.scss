@@ -57,7 +57,7 @@ a{
 .container{
   max-width: 1700px;
   width: 100%;
-  padding: 0 8%;
+  padding: 0 8% !important;
 }
 
 .flex-row-center{
@@ -173,7 +173,7 @@ h1{
 }
 
 .carousel{
-  margin-left: 8%;
+  position: relative;
 
   h2{
     margin-bottom: 34px;
@@ -196,29 +196,53 @@ h1{
   .slider{
     display: flex;
     gap: 30px;
+
+    .miniatura{
+      max-width: 248px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+  
+      img{
+        max-width: 248px;
+        height: 387px;
+        object-fit: cover;
+      }
+  
+      .duration{
+        line-height: normal;
+        margin: 27px 0 13.5px 0;
+      }
+      
+      h3{
+        font: normal normal 900 30px/30px 'Circular';
+        letter-spacing: -0.3px;
+      }
+    }
   }
 
-  .miniatura{
-    max-width: 248px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+  .arrow{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    fill: #fff;
+    transition: .3s;
+    z-index: 2;
+    cursor: pointer;
 
-    img{
-      max-width: 248px;
-      height: 387px;
-      object-fit: cover;
+    &:hover{
+      opacity: .7;
     }
+  }
 
-    .duration{
-      line-height: normal;
-      margin: 27px 0 13.5px 0;
-    }
-    
-    h3{
-      font: normal normal 900 30px/30px 'Circular';
-      letter-spacing: -0.3px;
-    }
+  #left-arrow{
+    left: 5%;
+  }
+
+  #right-arrow{
+    right: 0;
   }
 }

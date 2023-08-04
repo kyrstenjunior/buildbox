@@ -21,3 +21,15 @@ Rascunho:
       </li>
     </ul>
 <?php } ?>
+
+
+<? php
+  $terms = get_the_terms(get_the_ID(), 'video_type');
+  if($terms && !is_wp_error($terms)){
+    foreach($terms as $term){
+      if($term -> taxonomy === 'video_type'){
+        $categoria = $term->name;
+      };
+    };
+  };
+?>
