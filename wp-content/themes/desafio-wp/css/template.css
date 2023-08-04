@@ -214,4 +214,31 @@ h1 {
 }
 .carousel #right-arrow {
   right: 0;
+}
+
+#pagina-categoria {
+  color: var(--text);
+  background-color: var(--bg-page);
+  padding-top: 235px;
+}
+#pagina-categoria .miniatura {
+  max-width: 248px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#pagina-categoria .miniatura img {
+  max-width: 248px;
+  height: 387px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#pagina-categoria .miniatura .duration {
+  line-height: normal;
+  margin: 27px 0 13.5px 0;
+}
+#pagina-categoria .miniatura h3 {
+  font: normal normal 900 30px/30px "Circular";
+  letter-spacing: -0.3px;
 }/*# sourceMappingURL=template.css.map */

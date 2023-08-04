@@ -246,3 +246,34 @@ h1{
     right: 0;
   }
 }
+
+#pagina-categoria{
+  color: var(--text);
+  background-color: var(--bg-page);
+  padding-top: calc(92px + 143px); // altura do header + altura XD
+
+  .miniatura{
+    max-width: 248px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    img{
+      max-width: 248px;
+      height: 387px;
+      object-fit: cover;
+    }
+
+    .duration{
+      line-height: normal;
+      margin: 27px 0 13.5px 0;
+    }
+    
+    h3{
+      font: normal normal 900 30px/30px 'Circular';
+      letter-spacing: -0.3px;
+    }
+  }
+
+}
