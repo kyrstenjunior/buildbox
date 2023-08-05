@@ -245,5 +245,4 @@ function carousel_script(){
 }
 add_action('wp_enqueue_scripts','carousel_script');
 
-
 ?>

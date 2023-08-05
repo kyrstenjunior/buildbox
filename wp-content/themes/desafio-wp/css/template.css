@@ -52,10 +52,18 @@ a:hover {
   padding: 0 8% !important;
 }
 
+.padding-top-page {
+  padding-top: 235px !important;
+}
+
 .flex-row-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hidden {
+  display: none;
 }
 
 .video-type {
@@ -95,6 +103,13 @@ header .container {
 header .menu {
   display: flex;
   gap: 50px;
+}
+header .menu .menu-item a {
+  font: normal normal 500 19px/27px "Circular";
+  letter-spacing: 0.57px;
+}
+header .menu .current-menu-item a {
+  color: var(--primary);
 }
 
 footer {
@@ -179,7 +194,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
 }
 .carousel .slider .miniatura img {
   max-width: 248px;
@@ -217,28 +231,266 @@ h1 {
 }
 
 #pagina-categoria {
+  display: flex;
+  justify-content: space-between;
   color: var(--text);
   background-color: var(--bg-page);
-  padding-top: 235px;
+  padding-bottom: 86px !important;
 }
-#pagina-categoria .miniatura {
+#pagina-categoria .content .titulo {
+  font: normal normal 900 40px/normal "Circular";
+  letter-spacing: -1px;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+#pagina-categoria .content p {
+  font: normal normal normal 18px/35px "Circular";
+  letter-spacing: 0.54px;
+  color: var(--text);
+  margin-right: 22%;
+}
+#pagina-categoria .grid-template {
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 46px;
+}
+#pagina-categoria .grid-template .miniatura {
   max-width: 248px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
 }
-#pagina-categoria .miniatura img {
+#pagina-categoria .grid-template .miniatura img {
   max-width: 248px;
   height: 387px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#pagina-categoria .miniatura .duration {
+#pagina-categoria .grid-template .miniatura .duration {
   line-height: normal;
   margin: 27px 0 13.5px 0;
 }
-#pagina-categoria .miniatura h3 {
+#pagina-categoria .grid-template .miniatura h3 {
   font: normal normal 900 30px/30px "Circular";
   letter-spacing: -0.3px;
+}
+
+#single-page {
+  background-color: var(--bg-page);
+  color: var(--text);
+  padding-bottom: 122px !important;
+}
+#single-page .infos {
+  max-width: 1083px;
+  margin: 0 auto;
+  margin-bottom: 74px;
+}
+#single-page .infos h3 {
+  font: normal normal 900 70px/100px "Circular";
+  letter-spacing: -2.8px;
+}
+#single-page .video {
+  max-width: 1638px;
+  width: 100%;
+  height: 920px;
+  position: relative;
+}
+#single-page .video #play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.4s;
+}
+#single-page .video #play:hover {
+  filter: brightness(0.6);
+}
+#single-page .video #capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#single-page .video iframe {
+  max-width: 1638px;
+  width: 100%;
+  height: 920px;
+}
+#single-page .sinopse {
+  margin-top: 93px;
+}
+#single-page .sinopse p {
+  max-width: 944px;
+  font: normal normal medium 18px/35px "Circular";
+  letter-spacing: 0.54px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+  /* Página Inicial */
+  header .menu .menu-item a {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .bg-inicial {
+    height: 770px;
+  }
+  .bg-inicial .featured-content {
+    top: 330px;
+  }
+  .bg-inicial .featured-content h1 {
+    font-size: 74px;
+  }
+  .bg-inicial .featured-content a {
+    padding: 16px 60px;
+  }
+  .carousel .slider {
+    display: flex;
+    gap: 0;
+  }
+  .carousel .slider .miniatura h3 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+  /* Página de Categoria */
+  #pagina-categoria .grid-template .miniatura {
+    max-width: 212px;
+  }
+  #pagina-categoria .grid-template .miniatura img {
+    max-width: 212px;
+    height: 318px;
+  }
+  #pagina-categoria .grid-template .miniatura h3 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  /* Página de Vídeo */
+  #single-page .video {
+    max-width: 1124px;
+    height: 642px;
+    margin: 0 auto;
+  }
+  #single-page .video iframe {
+    max-width: 1124px;
+    height: 642px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #pagina-categoria .grid-template {
+    grid-template: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo a img {
+    width: 71px;
+    height: 23px;
+  }
+  .duration {
+    font-size: 12px;
+    line-height: normal;
+    padding: 6px 40px;
+    margin: 22px 0 10px 0;
+  }
+  .video-type {
+    font-size: 12px;
+    line-height: normal;
+    padding: 7px 40px;
+    margin: 22px 0 10px 0;
+    margin-right: 9px;
+  }
+  .bg-inicial .featured-content h1 {
+    font-size: 40px;
+    letter-spacing: -1.6px;
+  }
+  .bg-inicial .featured-content a {
+    font-size: 12px;
+    line-height: normal;
+    padding: 10px 70px;
+  }
+  header .menu .menu-item a {
+    font-size: 14px;
+  }
+  footer {
+    height: 300px;
+  }
+  footer .container {
+    text-align: center;
+    gap: 26px;
+  }
+  .carousel h2#Filmes {
+    margin-top: 61px;
+    margin-bottom: 22px;
+  }
+  .carousel h2#Filmes a {
+    font-size: 23px;
+  }
+  .carousel h2#Documentários, .carousel h2#Séries {
+    margin-top: 26px;
+    margin-bottom: 22px;
+  }
+  .carousel h2#Documentários a, .carousel h2#Séries a {
+    font-size: 23px;
+  }
+  .carousel .slider .miniatura img {
+    max-width: 148px;
+    height: 232px;
+  }
+  .carousel .slider .miniatura h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .carousel .arrow {
+    width: 38px;
+    height: 38px;
+  }
+  #pagina-categoria .content .titulo {
+    font-size: 23px;
+    margin-bottom: 12px;
+  }
+  #pagina-categoria .content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #pagina-categoria .grid-template .miniatura img {
+    max-width: 148px;
+    height: 232px;
+  }
+  #pagina-categoria .grid-template .miniatura h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  #single-page .infos h3 {
+    font: normal normal 900 28px/normal "Circular";
+    margin-top: 17px;
+    letter-spacing: -1.6px;
+  }
+  #single-page .video {
+    max-width: 575px;
+    height: 355px;
+  }
+  #single-page .video #play {
+    width: 53px;
+    height: 53px;
+  }
+  #single-page .video iframe {
+    max-width: 575px;
+    height: 355px;
+  }
+  #single-page .sinopse {
+    margin-top: 44px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #pagina-categoria {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=template.css.map */

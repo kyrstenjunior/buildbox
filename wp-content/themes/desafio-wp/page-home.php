@@ -73,9 +73,9 @@
               <?php $verificaTitulo = true; } ?>
               
                 <div class="miniatura swiper-slide">
-                  <img src="<?php the_field('imagem_de_capa') ?>" alt="<?php the_title(); ?>">
+                <a href="<?php echo get_permalink() ?>"><img src="<?php the_field('imagem_de_capa') ?>" alt="<?php the_title(); ?>"></a>
                   <span class="duration"> <?php the_field('bx_play_video_duration') ?>m </span>
-                  <h3> <?php the_title(); ?> </h3>
+                  <a href="<?php echo get_permalink() ?>"><h3> <?php the_title(); ?> </h3></a>
                 </div>
 
         <?php } ?>
@@ -121,9 +121,9 @@
           <?php $verificaTitulo = true; } ?>
 
           <div class="miniatura swiper-slide">
-            <img src="<?php the_field('imagem_de_capa') ?>" alt="<?php the_title(); ?>">
+          <a href="<?php echo get_permalink() ?>"><img src="<?php the_field('imagem_de_capa') ?>" alt="<?php the_title(); ?>"></a>
             <span class="duration"> <?php the_field('bx_play_video_duration') ?>m </span>
-            <h3> <?php the_title(); ?> </h3>
+            <a href="<?php echo get_permalink() ?>"><h3> <?php the_title(); ?> </h3></a>
           </div>
 
         <?php } ?>
@@ -170,9 +170,9 @@
           <?php $verificaTitulo = true; } ?>
 
           <div class="miniatura swiper-slide">
-            <img src="<?php the_field('imagem_de_capa') ?>" alt="<?php the_title(); ?>">
+          <a href="<?php echo get_permalink() ?>"><img src="<?php the_field('imagem_de_capa') ?>" alt="<?php the_title(); ?>"></a>
             <span class="duration"> <?php the_field('bx_play_video_duration') ?>m </span>
-            <h3> <?php the_title(); ?> </h3>
+            <a href="<?php echo get_permalink() ?>"><h3> <?php the_title(); ?> </h3></a>
           </div>
 
         <?php } ?>
