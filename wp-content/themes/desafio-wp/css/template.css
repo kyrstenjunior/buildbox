@@ -46,6 +46,10 @@ a:hover {
   filter: brightness(0.6);
 }
 
+.mobile-only {
+  display: none !important;
+}
+
 .container {
   max-width: 1700px;
   width: 100%;
@@ -492,5 +496,42 @@ h1 {
   #pagina-categoria {
     flex-direction: column;
     align-items: center;
+  }
+  #pagina-categoria .content p {
+    margin-right: 0;
+    margin-bottom: 38px;
+  }
+}
+@media screen and (max-width: 690px) {
+  #single-page .video {
+    max-width: 375px;
+    height: 210px;
+  }
+  #single-page .video iframe {
+    max-width: 375px;
+    height: 210px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+  }
+  header .container {
+    justify-content: center;
+  }
+  header .container ul.menu {
+    width: 101%;
+    height: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9019607843);
+    top: calc(100vh - 83px);
   }
 }/*# sourceMappingURL=template.css.map */

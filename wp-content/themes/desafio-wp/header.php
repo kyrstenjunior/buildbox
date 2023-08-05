@@ -19,7 +19,10 @@
       <div class="logo">
         <a href="/buildbox/"><?php the_custom_logo() ?></a>
       </div>
-      <nav class="menu">
+      <nav class="menu desktop-only">
+        <?php wp_nav_menu(['theme_location' => 'main_menu']); ?>
+      </nav>
+      <nav class="menu mobile-only">
         <?php wp_nav_menu(['theme_location' => 'main_menu']); ?>
       </nav>
     </div>
